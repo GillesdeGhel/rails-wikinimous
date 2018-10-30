@@ -1,0 +1,15 @@
+<div class='container'>
+  <div class='row'>
+    <div class='col-md-8 offset-md-2'>
+      <h1>  <%= @article[:title]%> <%= link_to ("<i class='far fa-trash-alt'></i>").html_safe, article_path(@article),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>
+      </h1>
+      <p>
+        <%= @article[:content] %>
+      </p>
+      <div class='btn btn-succes'> <%= link_to "edit this article", edit_article_path(@article[:id]) %> </div>
+      <div class='btn btn-succes'> <%= link_to "back to articles", articles_path %></div>
+    </div>
+  </div>
+</div>

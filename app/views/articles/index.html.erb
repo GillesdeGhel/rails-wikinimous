@@ -1,0 +1,17 @@
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <% @articles.each do |article| %>
+        <article>
+          <h2>
+            <%= link_to article[:title], article_path(article[:id]) %>
+          </h2>
+        <%= article.content %>
+        </article>
+      <% end %>
+      <%= link_to (("<i class='fas fa-plus'></i>").html_safe + " Add a new article "), new_article_path %>
+    </div>
+  </div>
+</div>
