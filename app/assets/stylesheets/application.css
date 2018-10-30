@@ -18,6 +18,10 @@ article {
   text-align: justify;
 }
 
+i {
+  font-weight: lighter;
+}
+
 h2 {
   font-size: 28PX;
 }
